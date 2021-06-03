@@ -67,7 +67,7 @@ const Wrapper = styled.div`
     background: #fff;
     padding: 10px;
     width: 100%;
-    height: 100%;
+    height: 70px;
   }
 
   svg {
@@ -134,11 +134,11 @@ const Wrapper = styled.div`
       left: 5px;
     }
     input {
-      font-size: 5vw;
+      font-size: 4vw;
     }
     button {
       font-size: 4vw;
-      padding: 5px;
+      padding: 10px;
     }
     .request {
       font-size: 5vw;

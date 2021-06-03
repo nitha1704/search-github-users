@@ -130,7 +130,7 @@ const Person = styled.div`
   }
 
   .lazy-load-image-background.blur {
-    filter: blur(0.1px);
+    filter: blur(0px);
     width: 45px;
     height: 45px;
   }

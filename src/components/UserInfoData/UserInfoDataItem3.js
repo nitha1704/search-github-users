@@ -2,6 +2,10 @@ import React from "react";
 import { GithubContext } from "../../context/globalContext";
 import styled from "styled-components";
 
+import {LazyLoadImage} from 'react-lazy-load-image-component';
+import "react-lazy-load-image-component/src/effects/blur.css";
+
+import loadingIMG from '../../images/Spin-1s-200px.gif';
 
 const UserInfoDataItem3 = () => {
   const { followers } = React.useContext(GithubContext);
@@ -11,7 +15,13 @@ const UserInfoDataItem3 = () => {
       const { login, avatar_url, html_url } = follower;
       return (
         <Person id="person" key={index}>
-          <img src={avatar_url} alt={login} className="img-fit person-item1" />
+          <LazyLoadImage
+            src={avatar_url}
+            alt={login}
+            className="img-fit person-item1"
+            placeholderSrc={loadingIMG}
+            effect="blur"
+          />
           <div className="person-item2">
             <h3>{login}</h3>
             <a href={html_url} target="blank">
@@ -73,6 +83,7 @@ const Wrapper = styled.div`
   }
   #person img {
     width: 45px;
+    height: 45px;
     border-radius: 50%;
   }
   .person-item2 a {
@@ -116,6 +127,12 @@ const Person = styled.div`
   margin-bottom: 20px;
   &:last-child {
     margin: 0;
+  }
+
+  .lazy-load-image-background.blur {
+    filter: blur(0.1px);
+    width: 45px;
+    height: 45px;
   }
 `;
 

@@ -69,6 +69,7 @@ const UserChartData = () => {
     })
     .slice(0, 5);
 
+
   return (
     <section id="user-graph-data">
       <Wrapper className="inner">

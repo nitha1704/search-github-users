@@ -66,6 +66,8 @@ const Wrapper = styled.div`
     align-items: center;
     background: #fff;
     padding: 10px;
+    width: 100%;
+    height: 100%;
   }
 
   svg {

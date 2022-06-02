@@ -1,13 +1,12 @@
 import React from "react";
 import { SearchBar, UserInfoData, UserChartData } from "../components/index";
-import {GithubContext} from '../context/globalContext';
+import { GithubContext } from "../context/globalContext";
 import loadingImage from "../images/preloader.gif";
 
 const Home = () => {
+  const { loading } = React.useContext(GithubContext);
 
-  const {loading} = React.useContext(GithubContext);
-
-  if(loading) {
+  if (loading) {
     return (
       <>
         <SearchBar />
